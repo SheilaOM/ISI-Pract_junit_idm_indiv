@@ -9,7 +9,12 @@ public class Union {
         }
 
         Vector vect = new Vector(5);
-        vect = a;
+
+        for (int i=0;i<a.size();i++) {
+            if (!vect.contains(a.elementAt(i))) {
+                vect.addElement(a.elementAt(i));
+            }
+        }
 
         for (int i=0;i<b.size();i++) {
             if (!vect.contains(b.elementAt(i))) {
