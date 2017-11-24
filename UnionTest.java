@@ -35,7 +35,7 @@ public class UnionTest
     }
 
     @Test
-    public void elementContainNull()
+    public void elementNull()
     {
         a.addElement(2);
         a.addElement(3);
@@ -52,6 +52,14 @@ public class UnionTest
         c.addElement(5);
         c.addElement(a);
 
-        assertTrue("A vector has null element", c.equals(Union.union(a, b)));
+        assertTrue("A vector contain null element", c.equals(Union.union(a, b)));
+    }
+
+    @Test (expected = NullPointerException.class)
+    public void nullVector()
+    {
+        a = null;
+        b.addElement(4);
+        Union.union(a, b);
     }
 }
