@@ -33,25 +33,25 @@ public class UnionTest
 
         assertTrue("A same element is in both vectors", c.equals(Union.union(a, b)));
     }
-}
 
-@Test
-public void elementContainNull()
-{
-    a.addElement(2);
-    a.addElement(3);
-    a.addElement(null);
+    @Test
+    public void elementContainNull()
+    {
+        a.addElement(2);
+        a.addElement(3);
+        a.addElement(null);
 
-    b.addElement(2);
-    b.addElement(5);
-    b.addElement(a);
+        b.addElement(2);
+        b.addElement(5);
+        b.addElement(a);
 
-    Vector c = new Vector(5);
-    c.addElement(2);
-    c.addElement(3);
-    c.addElement(null);
-    c.addElement(5);
-    c.addElement(a);
+        Vector c = new Vector(5);
+        c.addElement(2);
+        c.addElement(3);
+        c.addElement(null);
+        c.addElement(5);
+        c.addElement(a);
 
-    assertTrue("A vector has null element", c.equals(Union.union(a, b)));
+        assertTrue("A vector has null element", c.equals(Union.union(a, b)));
+    }
 }
