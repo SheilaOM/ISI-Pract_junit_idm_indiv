@@ -23,4 +23,16 @@ public class Union {
         }
         return vect;
     }
+
+    public static Set unionSet(Set a, Set b)
+    {
+        Set set_new = new HashSet();
+        if (a == null || b == null)
+        {
+            throw new NullPointerException ("UnionSet.unionSet");
+        }
+        set_new.addAll(a);
+        set_new.addAll(b);
+        return set_new;
+    }
 }
